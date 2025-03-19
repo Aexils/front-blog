@@ -1,0 +1,8 @@
+<button (click)="switchingTheme(theme() === 'dark' ? 'light' : 'dark')">
+  <img
+    class="h-4 w-4 fill-slate-400"
+    [src]="theme() === 'dark' ? '/icons/moonIcon.svg' : '/icons/sunIcon.svg'"
+    height="16"
+    width="16"
+    alt="{{ theme() === 'dark' ? 'Moon Icon' : 'Sun Icon' }}"/>
+</button>

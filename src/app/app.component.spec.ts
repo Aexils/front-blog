@@ -1,10 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-principal-info',
+  template: ''
+})
+class MockPrincipalInfoComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, MockPrincipalInfoComponent],
     }).compileComponents();
   });
 
@@ -14,16 +21,21 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'front-portfolio' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('front-portfolio');
-  });
-
-  it('should render title', () => {
+  it('should render developer info component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, front-portfolio');
+
+    const developerInfo = compiled.querySelector('app-user-preferences');
+    expect(developerInfo).toBeTruthy();
+  });
+
+  it('should render developer info component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const developerInfo = compiled.querySelector('app-principal-info');
+    expect(developerInfo).toBeTruthy();
   });
 });
