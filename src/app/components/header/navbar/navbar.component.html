@@ -1,0 +1,30 @@
+<nav class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Left side -->
+      <div class="flex space-x-4 items-center">
+        <a routerLink="/" class="text-lg font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
+          Accueil
+        </a>
+        <a routerLink="/posts" class="text-lg text-gray-700 dark:text-gray-300 hover:underline">
+          Blog
+        </a>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center space-x-4">
+        <ng-container *ngIf="isLoggedIn(); else showLogin">
+          <app-user-menu />
+        </ng-container>
+        <ng-template #showLogin>
+          <a
+            routerLink="/login"
+            class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition"
+          >
+            Connexion
+          </a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>

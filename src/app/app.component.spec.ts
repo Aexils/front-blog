@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
 
-    const developerInfo = compiled.querySelector('app-user-preferences');
+    const developerInfo = compiled.querySelector('app-user-menu');
     expect(developerInfo).toBeTruthy();
   });
 
