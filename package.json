@@ -1,5 +1,5 @@
 {
-  "name": "front-portfolio",
+  "name": "front-blog",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "serve:ssr:front-portfolio": "node dist/front-portfolio/server/server.mjs",
+    "serve:ssr:front-blog": "node dist/front-blog/server/server.mjs",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"

@@ -14,7 +14,7 @@ WORKDIR /app
 
 RUN npm install -g http-server
 
-COPY --from=build /app/dist/front-portfolio/browser /app
+COPY --from=build /app/dist/front-blog/browser /app
 
 EXPOSE 80
 

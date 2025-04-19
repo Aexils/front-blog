@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "front-portfolio": {
+    "front-blog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/front-portfolio",
+            "outputPath": "dist/front-blog",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "front-portfolio:build:production"
+              "buildTarget": "front-blog:build:production"
             },
             "development": {
-              "buildTarget": "front-portfolio:build:development"
+              "buildTarget": "front-blog:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,11 +74,11 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "front-portfolio:serve"
+            "devServerTarget": "front-blog:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "front-portfolio:serve:production"
+              "devServerTarget": "front-blog:serve:production"
             }
           }
         },
@@ -92,27 +92,27 @@
         "ct": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "front-portfolio:serve",
+            "devServerTarget": "front-blog:serve",
             "watch": true,
             "headless": false,
             "testingType": "component"
           },
           "configurations": {
             "development": {
-              "devServerTarget": "front-portfolio:serve:development"
+              "devServerTarget": "front-blog:serve:development"
             }
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "front-portfolio:serve",
+            "devServerTarget": "front-blog:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "front-portfolio:serve:production"
+              "devServerTarget": "front-blog:serve:production"
             }
           }
         }
